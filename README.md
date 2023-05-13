@@ -1,25 +1,7 @@
-# Template til skoleprosjekter
+# Hvilket tall
 
-## Sett opp prosjektet lokalt
+Teknisk test for å lage et gjettespill, med fokus på design. 
 
-npm install (husk å endre navn på pakken)  
+Base til prosjektet klonet fra min template: [Repo](https://github.com/reiv003/template)
 
-## Sette opp git og publiser til GitHub
-
-git clone https://reiv003@github.com/reiv003/template.git  
-slett .git-filen fra mappen (dette er for at commit-historikken til template-prosjektet ikke skal bli med i det nye prosjektet)  
-git init  
-(lag ny remote repo først direkte på github)  
-git remote add origin https://brukernavn@github.com/brukernavn/reponavn.git   
-lag initial commit  
-publish branch (main)  
-
-## Publiser til Netlify
-
-npm run build  
-npm run preview  
-(genererer dist-mappe)  
-
-Velg deploy fra GitHub på Netlify  
-
-kjør npm run build hver gang en endring er committed for å oppdatere nettsiden.  
+Figma-skisse: [Figma](https://www.figma.com/file/WgSoLFRR1athhKJYT9UO0G/Hvilket-tall?type=design&node-id=16%3A1729&t=v4FEaQv3un2RJ9Eg-1)
