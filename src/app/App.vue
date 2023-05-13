@@ -1,5 +1,7 @@
 <template>
+  <header><RouterLink to="/"><button aria-label="Hjem">logo</button></RouterLink></header>
   <RouterView />
+  <footer>(c) Sitrus Forlag</footer>
 </template>
 
 <script>
