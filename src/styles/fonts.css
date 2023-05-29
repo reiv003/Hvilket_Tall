@@ -1,8 +1,75 @@
-/*
 @font-face {
-	font-family: Arial;
-	src: url('/assets/fonts/Arial.ttf');
+	font-family: Pangolin;
+	src: url('/assets/fonts/Pangolin-Regular.ttf');
 	font-weight: normal;
 	font-style: normal;
 }
-*/
+
+@font-face {
+	font-family: Karla;
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: KarlaExtraLight;
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: KarlaMedium;
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: KarlaExtraBold;
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: KarlaLight;
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: KarlaBold;
+	src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	font-size: 24px;
+	font-family: Karla;
+}
+
+h1, h2 {
+	font-family: Pangolin;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+.text-box__label {
+	font-family: KarlaExtraBold;
+	font-size: 1.2em;
+	color: var(--inverse-text-color);
+}
+
+.start-button {
+	font-size: 1.5em;
+}

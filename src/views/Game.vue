@@ -1,24 +1,39 @@
 <template>
-	<h1>Hvilket tall</h1>
-	<form>
-		<label for="inputGuess">Gjett tallet: </label>
-		<input v-model.number="inputGuess" id="inputGuess"/>
-		<button class="button" @click.prevent="postGuess">Gjett</button>
-	</form>
-	<div>Du gjettet sist: {{ lastGuess }}, dette er {{ result }}</div>
-	<!--<div>Du har {{ guessLimit }} forsøk igjen.</div>-->
-	<div>{{ guessCountMessage }} </div>
-	<div><h2>Historikk</h2></div>
-	<div>{{ log }}</div>
-	<div> {{ resultMessage }} </div>
-	<div v-if="showNameInput">
-		<form>
-			<label for="nameInput">Ditt navn: </label>
-			<input type="text" v-model.trim="nameInput" id="nameInput"/>
-			<button class="button" @click.prevent="enterHighScore">Legg inn</button>
+	<div class="game__container">
+		<h1>Hvilket tall</h1>
+		<form class="guessForm">
+			<label for="inputGuess">Gjett tallet: </label>
+			<input v-model.number="inputGuess" id="inputGuess"/>
+			<button class="button" @click.prevent="postGuess">Gjett</button>
 		</form>
+		<div class="gameStatus">
+			<div>Du gjettet sist: {{ lastGuess }}, dette er {{ result }}</div>
+			<!--<div>Du har {{ guessLimit }} forsøk igjen.</div>-->
+			<div>{{ guessCountMessage }} </div>
+		</div>
+		<div class="text-box__label">Historikk</div>
+		<div class="guessLog">
+			<div class="text-box">
+				<ul>
+					<li v-for="guess in guesses">
+						{{ guess }}
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="winningResult">
+			<div> {{ resultMessage }} </div>
+			<div v-if="showNameInput">
+				<form>
+					<label for="nameInput">Ditt navn: </label>
+					<input type="text" v-model.trim="nameInput" id="nameInput"/>
+					<button class="button" @click.prevent="enterHighScore">Legg inn</button>
+				</form>
+			</div>
+		</div>
+		<div class="highScores">{{ highScoresLong }}</div>
 	</div>
-	<div>{{ highScoresLong }}</div>
 </template>
 
 <script>
@@ -32,7 +47,7 @@
 		methods: {
 			postGuess(event) {
 				this.lastGuess = this.inputGuess;
-				this.log.unshift(this.lastGuess);
+				this.guesses.unshift(this.lastGuess);
 				this.calculateHigherOrLower();
 				this.guessLimit--;
 				this.guessCountMessage = `Du har ${this.guessLimit} forsøk igjen`;
@@ -51,7 +66,7 @@
 				} else if (this.lastGuess === this.randomNum) {
 					this.result = "riktig!";
 				} else {
-					this.result = "ikke et tall";
+					this.result = "ikke et tall.";
 				}
 			},
 
@@ -70,7 +85,7 @@
 				lastGuess: '_____',
 				inputGuess: null,
 				result: '',
-				log: [],
+				guesses: [],
 				guessCountMessage: '',
 				guessLimit: 10,
 				highScores: [],

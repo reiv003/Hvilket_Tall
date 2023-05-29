@@ -1,10 +1,86 @@
 body {
-	background-color: aliceblue;
+	background-color: #fff;
+	background: url('/assets/images/tallbord_stor.svg') no-repeat -3em -4em,
+	url('/assets/images/tallbord_stor.svg') no-repeat -2.5em 32.7em;
 }
 
-.button {
+.home__container, .game__container {
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+
+}
+
+header, footer {
+	text-align: center;
+	padding: 1em;
+}
+
+.home__container h1, .home__container .text-box {
+	grid-column: 3 / 9;
+}
+
+.home__container a {
+	grid-column: 8 / 10;
+}
+
+.text-box {
+	border: 5px solid var(--box-border-color);
+	padding: 1.5em;
+	border-radius: 30px;
+}
+
+.text-box__label {
+	background-color: var(--box-border-color);
+	grid-column: 7 / 9;
+	text-align: center;
+	border-radius: 26px 26px 0px 0px;
+	margin-right: 2em;
+
+}
+
+.game__container .text-box__label {
+	grid-column: 10 / 12;
+}
+
+.text-box p {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.game__container h1 {
+	grid-column: 3 / 6;
+}
+
+.guessForm {
+	grid-column: 3 / 6;
+}
+
+.gameStatus {
+	grid-column: 3 / 6;
+}
+
+.guessLog {
+	grid-column: 8 / 12;
+}
+
+.highScores {
+	grid-column: 8 / 12;
+	display: none;
+}
+
+.winningResult {
+	grid-column: 3 /6;
+}
+
+.button, .start-button {
 	background-color: rgb(9, 73, 0);
 	color: white;
 	padding: 10px;
-	border-radius: 34%;
+	border-radius: 34px;
+	margin: 5px;
+}
+
+.start-button {
+	padding-left: 50px;
+	padding-right: 50px;
 }

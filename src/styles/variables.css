@@ -1,3 +1,14 @@
 :root {
+	--text-color: #000;
+	--inverse-text-color: #fff;
 	--sample-variable: 0.5em;
+	--box-border-color: #F4BB27;
+	--button-color: #255714;
+	--title-color: #5C6B3C;
+	--detail-color: #4F5914;
+	--link-color: #DCA046;
+	--footer-text-color: #473820;
+	--error-color: #B93F3F;
+	--number-guess-color: #AA711B;
+	--description-text-color: #1D2C0A;
 }
