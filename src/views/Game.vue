@@ -1,6 +1,6 @@
 <template>
 	<div class="game__container">
-		<h1>Hvilket tall</h1>
+		<h1>Hvilket tall?</h1>
 		<form class="guessForm">
 			<label for="inputGuess">Gjett tallet: </label>
 			<input v-model.number="inputGuess" id="inputGuess"/>

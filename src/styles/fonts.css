@@ -58,6 +58,7 @@ h1, h2 {
 
 h1 {
 	font-size: 3em;
+	color: var(--title-color);
 }
 
 h2 {
@@ -70,6 +71,14 @@ h2 {
 	color: var(--inverse-text-color);
 }
 
+.text-box a {
+	color: var(--link-color);
+}
+
+.text-box {
+	font-size: 1.2em;
+}
+
 .start-button {
-	font-size: 1.5em;
+	font-size: 2em;
 }
