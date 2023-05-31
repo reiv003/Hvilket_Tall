@@ -1,7 +1,7 @@
 <template>
-  <header><RouterLink to="/"><button aria-label="Hjem">logo</button></RouterLink></header>
-  <RouterView />
-  <footer>(c) Sitrus Forlag</footer>
+    <header><RouterLink to="/"><button aria-label="Hjem"><img src="/assets/images/brevpapirlogo.svg"/></button></RouterLink></header>
+    <RouterView />
+    <footer>Sitrus Forlag © 2023</footer>
 </template>
 
 <script>
