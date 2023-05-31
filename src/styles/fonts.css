@@ -62,7 +62,11 @@ h1 {
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 1.3em;
+}
+
+form label {
+	font-size: 1.2em;
 }
 
 .text-box__label {
@@ -81,4 +85,24 @@ h2 {
 
 .start-button {
 	font-size: 2em;
+}
+
+.gameStatus {
+	font-family: KarlaLight;
+	color: var(--detail-color);
+	font-size: 0.9em;
+}
+
+.lastGuessResult span {
+	color: var(--number-guess-color)
+}
+
+.resultMessageText {
+	font-family: KarlaExtraBold;
+	color: var(--winning-text-color);
+	font-size: 1.3em;
+}
+
+.wrong-error-text {
+	color: var(--error-color);
 }
