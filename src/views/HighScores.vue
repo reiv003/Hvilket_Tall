@@ -3,10 +3,10 @@
 		<h1>Hvilket tall?</h1>
 		<div class="text-box__label">High Scores</div>
 		<div class="text-box">
-			<div><a href="/">Gå tilbake</a></div>
+			<div>Kommer snart!</div>
 		</div>
 		
-		<RouterLink to="/spill"><button class="start-button">Tilbake til spillet</button></RouterLink>
+		<RouterLink to="/"><button class="start-button">Tilbake</button></RouterLink>
 	</div>
 </template>
 

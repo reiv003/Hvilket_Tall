@@ -50,16 +50,23 @@
 			this.guessCountMessage = `Du har ${this.guessLimit} forsøk igjen`;
 		},
 		methods: {
-			postGuess(event) {
+			postGuess() {
 				this.lastGuess = this.inputGuess;
-				this.guesses.unshift(this.lastGuess);
 				this.calculateHigherOrLower();
-				this.guessLimit--;
-				this.guessCountMessage = `Du har ${this.guessLimit} forsøk igjen`;
-				if(this.guessLimit >= 0 && this.result == "riktig!") {
+				
+				
+				if (this.guessLimit > 0 && this.result === "riktig!") {
 					this.resultMessage = `Du vant! Tallet var ${this.randomNum}.`;
 					this.enterHighScore();
-				} else if (this.guessLimit <= 0) {
+				}
+
+				else if (this.guessLimit > 0) {
+					--this.guessLimit;
+					this.guesses.unshift(this.lastGuess);
+					console.log(this.guessLimit);
+					this.guessCountMessage = `Du har ${this.guessLimit} forsøk igjen`;
+
+				} else if (this.guessLimit == 0) {
 					this.resultMessage = `Du tapte! Tallet var ${this.randomNum}.`;
 					var messageColor = document.getElementById("resultMessage");
 					messageColor.classList.add("wrong-error-text");
@@ -79,8 +86,7 @@
 
 			enterHighScore() {
 				this.showNameInput = true;
-				//this.highScores.push(this.nameInput);
-				//this.$emit("score-added", this.nameInput, this.guessLimit);
+				
 				this.highScoresLong.push({name: this.nameInput, guessesUsed: this.guessLimit})
 				console.log( this.nameInput, this.guessLimit);
 			},
